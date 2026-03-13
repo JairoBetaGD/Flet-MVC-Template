@@ -1,7 +1,7 @@
 import flet as ft
 from src.views.home_view import HomeView
 
-def main(page: ft.Page):
+async def main(page: ft.Page):
     # Config móvil
     page.window_width = 390
     page.window_height = 844
@@ -21,4 +21,5 @@ def main(page: ft.Page):
 ft.run(
     main,
     assets_dir="assets"
+
 )
