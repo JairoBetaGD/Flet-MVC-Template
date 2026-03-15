@@ -71,20 +71,24 @@ class HomeView:
     def build(self):
         main_content = ft.Container(
             expand=True,
-            content=ft.Column(
+            content=ft.Column( #Main Column
                 spacing=20,
                 horizontal_alignment=ft.CrossAxisAlignment.CENTER,
                 controls=[
                     ft.Text("Inicio", size=24, weight=ft.FontWeight.BOLD),
-
-                    ft.ElevatedButton(
-                        "Mostrar Info",
-                        on_click=lambda e: self.overlay_info.show()
-                    ),
-
-                    ft.ElevatedButton(
-                        "Mostrar Imagen",
-                        on_click=lambda e: self.overlay_image.show()
+                    ft.Row(
+                        alignment=ft.MainAxisAlignment.CENTER,
+                        spacing=20,
+                        controls=[
+                            ft.ElevatedButton(
+                                "Mostrar Info",
+                                on_click=lambda e: self.overlay_info.show()
+                            ),
+                            ft.ElevatedButton(
+                                "Mostrar Imagen",
+                                on_click=lambda e: self.overlay_image.show()
+                            ),
+                        ]
                     ),
                 ]
             )
