@@ -51,7 +51,7 @@ class HomeView:
                     "Este es un overlay reutilizable.",
                     color=ft.Colors.WHITE
                 ),
-                ft.Button(
+                ft.ElevatedButton(
                     "Cerrar",
                     on_click=close_callback
                 )
@@ -74,7 +74,7 @@ class HomeView:
                     src="assets/imagendeejemplo.png",
                     width=250
                 ),
-                ft.Button(
+                ft.ElevatedButton(
                     "Cerrar",
                     on_click=close_callback
                 )
@@ -109,17 +109,17 @@ class HomeView:
                         alignment=ft.MainAxisAlignment.CENTER,
                         spacing=20,
                         controls=[
-                            ft.Button(
+                            ft.ElevatedButton(
                                 "Mostrar Info",
                                 on_click=lambda e: self.overlay_info.show()
                             ),
-                            ft.Button(
+                            ft.ElevatedButton(
                                 "Mostrar Imagen",
                                 on_click=lambda e: self.overlay_image.show()
                             ),
                         ]
                     ),
-                    ft.Button(
+                    ft.ElevatedButton(
                         "Seleccionar Imagen",
                         on_click=self.pick_image
                     ),
@@ -127,7 +127,7 @@ class HomeView:
                 ]
             )
         )
-#-------------------------------------------------------------------------------------
+
         return ft.Stack(
             expand=True,
             controls=[
